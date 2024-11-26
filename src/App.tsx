@@ -1,7 +1,14 @@
 import "./App.css";
+import Layout from "./Layout";
+import { Navbar } from "./ui/components/navbar/Navbar";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Navbar />
+      <Layout />
+    </>
+  );
 }
 
 export default App;
