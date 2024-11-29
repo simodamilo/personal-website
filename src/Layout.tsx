@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import Navigator from "./ui/components/navigator/Navigator";
 import Homepage from "./ui/pages/homepage/Homepage";
+import Experience from "./ui/pages/experience/Experience";
 
 export default function Layout() {
   return (
@@ -12,7 +13,7 @@ export default function Layout() {
             <Homepage />
           </div>
           <div id="part-2" className="h-fit lg:h-screen">
-            Page 2
+            <Experience />
           </div>
           <div id="part-3" className="h-fit lg:h-screen">
             Page 3
