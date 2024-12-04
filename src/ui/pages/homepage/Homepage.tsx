@@ -11,7 +11,7 @@ export default function Homepage() {
       <h2 className="text-2xl text-secondary-color dark:text-dark-secondary-color text-left">
         {t("homepage.intro-copy")}
       </h2>
-      <p className="text-base text-primary-color text-left font-bold mt-4">
+      <p className="text-lg text-primary-color text-left font-bold mt-4">
         {t("homepage.software-eng")}
       </p>
       <div className="text-left">

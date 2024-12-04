@@ -10,7 +10,16 @@ export const ExperienceTemplate = ({
   size,
 }: ExperienceTemplateProps) => {
   const getGridSize = () => {
-    return size === "sm" ? "grid-cols-3" : "grid-cols-6";
+    switch (size) {
+      case "sm":
+        return "grid-cols-3";
+      case "md":
+        return "grid-cols-6";
+      case "lg":
+        return "grid-cols-9";
+      default:
+        return "grid-cols-6";
+    }
   };
 
   const getDescription = (exp: Experience) => {
@@ -24,18 +33,20 @@ export const ExperienceTemplate = ({
   return (
     <div className="p-4 lg:p-6 text-secondary-color dark:text-dark-secondary-color">
       {size !== "sm" && (
-        <h1 className="text-4xl font-bold capitalize">{title}</h1>
+        <h1 className="text-4xl font-bold capitalize text-primary-color">
+          {title}
+        </h1>
       )}
       <div>
         {experiences?.map((exp) => {
           return (
             <div key={exp.key} className="mt-4">
               {/* Title */}
-              <h2 className={`text-2xl`}>{getTitle(exp)}</h2>
+              <h2 className={`text-2xl font-bold`}>{getTitle(exp)}</h2>
 
               {/* Description */}
               {size !== "sm" && (
-                <p className={`text-base mt-1 hidden lg:block`}>
+                <p className={`text-base mt-1 hidden font-mono lg:block`}>
                   {getDescription(exp)}
                 </p>
               )}

@@ -82,13 +82,13 @@ export default function Experience() {
 
   /* Get card style */
   const getCardStyle = (cardNo: number) => {
-    return `text-left lg:max-h-screen lg:overflow-y-auto rounded lg:cursor-pointer shadow-[0px_5px_5px_rgba(0,0,0,0.50)] dark:shadow-[0px_5px_5px_rgba(255,255,255,0.50)] mb-4 lg:mb-0 duration-500 w-full ${handleWidth(
+    return `text-left border-solid border-2 dark:border-[#521987] border-[#C495F0] lg:max-h-screen lg:overflow-y-auto rounded lg:cursor-pointer shadow-[0px_5px_5px_rgba(128,43,226,0.50)] dark:shadow-[0px_5px_5px_rgba(128,43,226,0.50)] mb-4 lg:mb-0 duration-500 w-full ${handleWidth(
       cardNo
     )}`;
   };
 
   return (
-    <div className="flex flex-col justify-between lg:h-full pt-[5%] pb-[5%] ml-6 mr-6 lg:flex-row lg:ml-20 lg:mr-20">
+    <div className="flex flex-col justify-between ml-6 mr-6 lg:h-full lg:flex-row lg:ml-20 lg:mr-20 lg:pt-36 lg:pb-36 lg:max-w-[1280px]">
       <div ref={workingDiv} className={getCardStyle(1)}>
         <ExperienceTemplate
           title={t("experience.work-title")}
